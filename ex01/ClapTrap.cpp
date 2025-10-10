@@ -12,7 +12,7 @@ ClapTrap::ClapTrap(const std::string& name)
 
 ClapTrap::ClapTrap(const ClapTrap& other)
 	: _name(other._name), _hitPoints(other._hitPoints),
-	  _energyPoints(other._energyPoints), _attackDamage(other._attackDamage) {
+	_energyPoints(other._energyPoints), _attackDamage(other._attackDamage) {
 	std::cout << "ClapTrap " << _name << " copy-constructed." << std::endl;
 }
 
@@ -42,15 +42,15 @@ void ClapTrap::attack(const std::string& target) {
 	}
 	--_energyPoints;
 	std::cout << "ClapTrap " << _name << " attacks " << target
-			  << ", causing " << _attackDamage << " points of damage! "
-			  << "(EP left: " << _energyPoints << ")" << std::endl;
+			<< ", causing " << _attackDamage << " points of damage! "
+			<< "(EP left: " << _energyPoints << ")" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
 	unsigned int damage = std::min(amount, _hitPoints);
 	_hitPoints -= damage;
 	std::cout << "ClapTrap " << _name << " takes " << damage
-			  << " points of damage! (HP left: " << _hitPoints << ")" << std::endl;
+			<< " points of damage! (HP left: " << _hitPoints << ")" << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
@@ -65,5 +65,5 @@ void ClapTrap::beRepaired(unsigned int amount) {
 	--_energyPoints;
 	_hitPoints += amount;
 	std::cout << "ClapTrap " << _name << " is repaired by " << amount
-			  << " points! (HP: " << _hitPoints << ", EP left: " << _energyPoints << ")" << std::endl;
+			<< " points! (HP: " << _hitPoints << ", EP left: " << _energyPoints << ")" << std::endl;
 }
