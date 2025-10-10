@@ -33,11 +33,11 @@ ScavTrap::~ScavTrap() {
 
 void ScavTrap::attack(const std::string& target) {
 	if (_hitPoints == 0) {
-		std::cout << "ClapTrap " << _name << " can't attack, it has no hit points left." << std::endl;
+		std::cout << "ClapTrap " << _name << " can't attack, it has no hit points left" << std::endl;
 		return;
 	}
 	if (_energyPoints == 0) {
-		std::cout << "ClapTrap " << _name << " can't attack, it has no energy left." << std::endl;
+		std::cout << "ClapTrap " << _name << " can't attack, it has no energy left" << std::endl;
 		return;
 	}
 	--_energyPoints;
