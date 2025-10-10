@@ -3,7 +3,7 @@ MAKEFLAGS	= -s
 CPP			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++17
 
-NAME		= scavtrap
+NAME		= fragtrap
 
 SRCS		= main.cpp ClapTrap.cpp ScavTrap.cpp
 
