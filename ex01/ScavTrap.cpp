@@ -28,7 +28,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
 }
 
 ScavTrap::~ScavTrap() {
-	std::cout << "ScavTrap " << _name << " deconstructed" << std::endl;
+	std::cout << "ScavTrap " << _name << " destructed" << std::endl;
 }
 
 void ScavTrap::attack(const std::string& target) {
